@@ -1,11 +1,12 @@
-
+/*
+Given a roman numeral, convert it to an integer.
+Input is guaranteed to be within the range from 1 to 3999.
+*/
 
 #include <iostream>
 #include <vector>
-#include <unordered_map>
 
 using namespace std;
-
 
 string symbol = "IVXLCDM";
 vector<int> symbolValue = {1, 5, 10, 50, 100, 500, 1000};
