@@ -31,10 +31,10 @@ class Solution {
 
 int main() {
     Solution sol;
-    cout << sol.romanToInt("DCCC") << " == 800" << endl;
-    cout << sol.romanToInt("XCIX") << " == 99" << endl;
-    cout << sol.romanToInt("LXXXIX") << " == 89" << endl;
-    cout << sol.romanToInt("LXXIV") << " == 74" << endl;
+    cout << to_string(sol.romanToInt("DCCC") == 800) << endl;
+    cout << to_string(sol.romanToInt("XCIX") == 99) << endl;
+    cout << to_string(sol.romanToInt("LXXXIX") == 89) << endl;
+    cout << to_string(sol.romanToInt("LXXIV") == 74) << endl;
     return 0;
 }
 
