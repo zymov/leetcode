@@ -36,9 +36,7 @@ public:
                 if(J[j] == S[i]) {
                     jewelNum++;
                     break;
-                } else {
-                    continue;
-                }
+                } 
             }
         }
         return jewelNum;
