@@ -37,15 +37,15 @@ class Solution {
         vector<vector<int>> levelOrder(TreeNode* root) {
             int h = height(root);
             vector<vector<int>> v(h, vector<int>());
-            levelOrder(v, root, 0);
+            BFS(v, root, 0);
             return v;
         }
 
-        void levelOrder(vector<vector<int>> &arr, TreeNode *node, int level) {
+        void BFS(vector<vector<int>> &arr, TreeNode *node, int level) {
             if(!node) return;
             arr[level].push_back(node->val);
-            levelOrder(arr, node->left, level + 1);
-            levelOrder(arr, node->right, level + 1);
+            BFS(arr, node->left, level + 1);
+            BFS(arr, node->right, level + 1);
         }
 
         int height(TreeNode *root) {
