@@ -30,18 +30,13 @@ class Solution {
 
     public:
         bool hasPathSum(TreeNode* root, int sum) {
-            if(root && !root->left && !root->right && root->val == sum) return true;
-            return hasPath2Sum(root, sum, root);
-        }
-        
-        bool hasPath2Sum(TreeNode* root, int sum, TreeNode* ROOT) {
             if(!root) return false;
-            if(root->val == sum && root != ROOT && !root->left && !root->right) {
+            if(root->val == sum && !root->left && !root->right) {
                 return true;
             } else {
-                return hasPath2Sum(root->left, sum - root->val, ROOT) || 
-                    hasPath2Sum(root->right, sum - root->val, ROOT);
-            } 
+                return hasPathSum(root->left, sum - root->val) || 
+                    hasPathSum(root->right, sum - root->val);
+            }
         }
 };
 
