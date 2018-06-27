@@ -22,16 +22,11 @@ class Solution {
 
     public:
         int majorityElement(vector<int>& nums) {
-            if(nums.size() == 1) return nums[0];
             unordered_map<int, int> hash;
-            for(int i = 0; i < nums.size(); i++) {
-                if(hash.find(nums[i]) != hash.end()) {
-                    hash[nums[i]]++;
-                    if(hash[nums[i]] > nums.size() / 2) {
-                        return nums[i];
-                    }
-                } else {
-                    hash[nums[i]] = 1;
+            int n = nums.size();
+            for(int i = 0; i < n; i++) {
+                if(++hash[nums[i]] > n/2) {
+                    return nums[i];
                 }
             }
         }
