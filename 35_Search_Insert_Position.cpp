@@ -61,3 +61,6 @@ int main() {
     cout << sol.searchInsert_BinarySearch(l, 8) << endl;
     return 0;
 }
+/*
+https://ai.googleblog.com/2006/06/extra-extra-read-all-about-it-nearly.html
+*/
