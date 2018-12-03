@@ -35,7 +35,7 @@ class Solution {
             for(auto p : prerequisites) {
                 graph[p.second].insert(p.first);
             }
-            vector<int> visited(numCourses, false), onPath(numCourses, false);
+            vector<bool> visited(numCourses, false), onPath(numCourses, false);
             for(int i = 0; i < numCourses; i++) {
                 if(!visited[i] && DFS_cycle(visited, onPath, graph, i))
                     return false;
@@ -43,7 +43,7 @@ class Solution {
             return true;
         }
 
-        bool DFS_cycle(vector<int>& visited, vector<int>& onPath, vector<unordered_set<int>>& graph, int course){
+        bool DFS_cycle(vector<bool>& visited, vector<bool>& onPath, vector<unordered_set<int>>& graph, int course){
             visited[course] = onPath[course] = true;
             for(int neigh : graph[course]) {
                 if(onPath[neigh] || DFS_cycle(visited, onPath, graph, neigh))
