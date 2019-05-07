@@ -23,15 +23,17 @@ class Solution {
     public:
 
         int strStr_BruteForce(string haystack, string needle) {
-            if(needle == "") return 0;
-            int i = 0, j = 0;
-            int H = haystack.length();
-            int N = needle.length();
-            for(; i < H; i++) {
-                for(; j < N; j++) {
-                    if(haystack[i + j] != needle[j]) break;
+            int m = haystack.size(), n = needle.size();
+            for (int i = 0; i <= m - n; i++) {
+                int j = 0;
+                for (; j < n; j++) {
+                    if (haystack[i + j] != needle[j]) {
+                        break;
+                    }
                 }
-                if(j == N) return i;
+                if (j == n) {
+                    return i;
+                }
             }
             return -1;
         }
