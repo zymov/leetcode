@@ -16,11 +16,7 @@ class ListNode(object):
         self.next = None
 
 class Solution(object):
-    def sortList(self, head):
-        """
-        :type head: ListNode
-        :rtype: ListNode
-        """
+    def sortList(self, head: ListNode) -> ListNode:
         if not head or not head.next:
             return head
         slow = head

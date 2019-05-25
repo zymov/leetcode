@@ -12,11 +12,7 @@ class ListNode(object):
         self.next = None
 
 class Solution(object):
-    def hasCycle(self, head):
-        """
-        :type head: ListNode
-        :rtype: bool
-        """
+    def hasCycle(self, head: ListNode) -> bool:
         slow = head
         fast = head
         while fast and fast.next and fast.next.next:
