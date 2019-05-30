@@ -60,7 +60,7 @@ class Solution {
             }
             return false;
         }
-        
+
 };
 
 int main() {
