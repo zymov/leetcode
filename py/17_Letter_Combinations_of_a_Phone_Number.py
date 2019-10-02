@@ -12,6 +12,8 @@ Output: ["ad", "ae", "af", "bd", "be", "bf", "cd", "ce", "cf"].
 Note:
 Although the above answer is in lexicographical order, your answer could be in any order you want.
 """
+from typing import List
+
 class Solution:
     def letterCombinations(self, digits: str) -> List[str]:
         mapping = {'2': 'abc', '3': 'def', '4': 'ghi', '5': 'jkl', 
