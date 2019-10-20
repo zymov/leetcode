@@ -10,6 +10,8 @@ Output:
   [2,1,1]
 ]
 """
+from typing import List
+
 class Solution:
     def permuteUnique(self, nums: List[int]) -> List[List[int]]:
         res = []
