@@ -1,3 +1,5 @@
+from typing import List
+
 class Solution:
     def uniquePathsWithObstacles(self, obstacleGrid: List[List[int]]) -> int:
         if not len(obstacleGrid) or not len(obstacleGrid[0]):
