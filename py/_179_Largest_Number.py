@@ -49,9 +49,21 @@ class Solution:
         res.extend(l1[i:] or l2[j:])
         return res
 
-    # def bubbleSort(self, nums: List[int]) -> str:
+    def bubbleSort(self, nums: List[int]) -> str:
+        for i in range(len(nums)):
+            for j in range(len(nums) - i - 1):
+                if self.compare(nums[j + 1], nums[j]):
+                    nums[j], nums[j + 1] = nums[j + 1], nums[j]
+        return str(int("".join(map(str, nums))))
 
-    # def selectionSort(self, nums: List[int]) -> str:
+    def selectionSort(self, nums: List[int]) -> str:
+        for i in range(len(nums)):
+            idx = i
+            for j in range(i + 1, len(nums)):
+                if self.compare(nums[j], nums[idx]):
+                    idx = j
+            nums[i], nums[idx] = nums[idx], nums[i]
+        return str(int("".join(map(str, nums))))
 
     def insertionSort(self, nums: List[int]) -> str:
         for i in range(len(nums)):
